@@ -24,6 +24,10 @@ open class ChartData: NSObject
     
     internal var _dataSets = [IChartDataSet]()
     
+    /// If true shows Y values in the bar, otherwise values will not be draw.
+    /// **default**: true
+    public var isDrawingValuesAllowed: Bool = true
+    
     public override init()
     {
         super.init()

@@ -619,7 +619,7 @@ open class HorizontalBarChartRenderer: BarChartRenderer
     
     open override func isDrawingValuesAllowed(dataProvider: ChartDataProvider?) -> Bool
     {
-        guard let data = dataProvider?.data
+        guard let data = dataProvider?.data, data.isDrawingValuesAllowed
             else { return false }
         return data.entryCount < Int(CGFloat(dataProvider?.maxVisibleCount ?? 0) * self.viewPortHandler.scaleY)
     }
