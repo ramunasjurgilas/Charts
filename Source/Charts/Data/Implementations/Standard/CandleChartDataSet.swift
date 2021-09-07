@@ -91,6 +91,10 @@ open class CandleChartDataSet: LineScatterCandleRadarChartDataSet, ICandleChartD
         }
     }
     
+    /// If candle height is less, than width then height will be set to the candle width.
+    /// **default**: false
+    open var shouldShowAsDot: Bool = false
+
      /// the corner radius of the candle bar,
      ///
      /// **default**: 0.0

@@ -23,6 +23,10 @@ public protocol ICandleChartDataSet: ILineScatterCandleRadarChartDataSet
     /// **default**: 0.1 (10%), max 0.45, min 0.0
     var barSpace: CGFloat { get set }
     
+    /// If candle height is less, than width then height will be set to the candle width.
+    /// **default**: false
+    var shouldShowAsDot: Bool { get set }
+    
     /// the corner radius of the candle bar,
     /// **default**: 0.0
     var barCornerRadius: CGFloat { get set }

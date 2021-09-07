@@ -78,7 +78,7 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
             
             let xPos = e.x
             
-            let open = e.open
+            var open = e.open
             let close = e.close
             let high = e.high
             let low = e.low
@@ -159,6 +159,11 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                 _bodyRect.size.height = CGFloat(open * phaseY) - _bodyRect.origin.y
                 
                 trans.rectValueToPixel(&_bodyRect)
+
+                if dataSet.shouldShowAsDot && _bodyRect.size.height < _bodyRect.size.width {
+                    _bodyRect.size.height = _bodyRect.size.width
+                    open = close + 1
+                }
                 
                 // define roundedRect for corner radius
                 
