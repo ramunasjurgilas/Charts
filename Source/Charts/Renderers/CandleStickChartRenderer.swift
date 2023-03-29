@@ -37,11 +37,11 @@ open class CandleStickChartRenderer: LineScatterCandleRadarRenderer
                                                  withDefaultDescription: "CandleStick Chart")
             accessibleChartElements.append(element)
         }
-
-        for case let set as CandleChartDataSetProtocol in candleData where set.isVisible
-        {
-            drawDataSet(context: context, dataSet: set)
-        }
+// RJ_
+//        for case let set as CandleChartDataSetProtocol in candleData where set.isVisible
+//        {
+//            drawDataSet(context: context, dataSet: set)
+//        }
     }
     
     private var _shadowPoints = [CGPoint](repeating: CGPoint(), count: 4)

@@ -51,11 +51,11 @@ open class RadarChartRenderer: LineRadarRenderer
                                              andData: radarData,
                                              withDefaultDescription: "Radar Chart")
         self.accessibleChartElements.append(element)
-
-        for case let set as RadarChartDataSetProtocol in radarData where set.isVisible
-        {
-            drawDataSet(context: context, dataSet: set, mostEntries: mostEntries)
-        }
+// RJ_
+//        for case let set as RadarChartDataSetProtocol in radarData where set.isVisible
+//        {
+//            drawDataSet(context: context, dataSet: set, mostEntries: mostEntries)
+//        }
     }
     
     /// Draws the RadarDataSet
